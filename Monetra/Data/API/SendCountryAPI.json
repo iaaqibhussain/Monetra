@@ -1,0 +1,13 @@
+[
+    {
+        "country" : "Binaria",
+        "keyboard_type" : "number_pad",
+        "acceptable_type" : "binary"
+    }
+    ,
+    {
+        "country" : "US",
+        "keyboard_type" : "decimal_pad",
+        "acceptable_type" : "decimal"
+    }
+]

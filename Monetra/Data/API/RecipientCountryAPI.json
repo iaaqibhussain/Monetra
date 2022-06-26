@@ -1,0 +1,29 @@
+[
+    {
+        "country" : "Kenya",
+        "country_code" : "+254",
+        "currency_code" : "KES",
+        "phone_regex" : "254\\d{8}$"
+    }
+    ,
+    {
+        "country" : "Nigeria",
+        "country_code" : "+234",
+        "currency_code" : "NGN",
+        "phone_regex" : "234(\\d{8}|\\d{9})$"
+    }
+    ,
+    {
+        "country" : "Tanzania",
+        "country_code" : "+255",
+        "currency_code" : "TZS",
+        "phone_regex" : "255\\d{9}$"
+    }
+    ,
+    {
+        "country" : "Uganda",
+        "country_code" : "+256",
+        "currency_code" : "UGX",
+        "phone_regex" : "256\\d{9}$"
+    }
+]

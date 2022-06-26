@@ -1,0 +1,914 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E60397B92868782500E66F2B /* ExchangeRateAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E60397B82868782500E66F2B /* ExchangeRateAPI.json */; };
+		E65C39E0285247BE00488E1F /* SendTransactionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C39DF285247BE00488E1F /* SendTransactionViewModelTests.swift */; };
+		E65C39E32852498A00488E1F /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C39E22852498A00488E1F /* Mocks.swift */; };
+		E686231A285115AE006B6573 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6862319285115AE006B6573 /* UIColor+Extension.swift */; };
+		E686231C2851199D006B6573 /* RecipientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686231B2851199D006B6573 /* RecipientViewModel.swift */; };
+		E686231E28511A4E006B6573 /* RecipientCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686231D28511A4E006B6573 /* RecipientCountry.swift */; };
+		E686232028511AC9006B6573 /* RecipientCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686231F28511AC9006B6573 /* RecipientCountryInteractor.swift */; };
+		E686232228511ADE006B6573 /* RecipientCountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232128511ADE006B6573 /* RecipientCountryRepository.swift */; };
+		E686232428511E89006B6573 /* SendTransactionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232328511E89006B6573 /* SendTransactionRouter.swift */; };
+		E6862326285129AD006B6573 /* CurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6862325285129AD006B6573 /* CurrencyRate.swift */; };
+		E686232828513574006B6573 /* CurrencyViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232728513574006B6573 /* CurrencyViewData.swift */; };
+		E686232A28513581006B6573 /* CurrencyDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232928513581006B6573 /* CurrencyDataMapper.swift */; };
+		E686232C28513F72006B6573 /* SendTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232B28513F72006B6573 /* SendTransactionRepository.swift */; };
+		E686232E28513F7B006B6573 /* SendTransactionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686232D28513F7B006B6573 /* SendTransactionInteractor.swift */; };
+		E686234C2851858B006B6573 /* RecipientExternalHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686234B2851858B006B6573 /* RecipientExternalHandler.swift */; };
+		E68623502851862E006B6573 /* CurrencyRateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686234F2851862E006B6573 /* CurrencyRateRequest.swift */; };
+		E686235228518649006B6573 /* RecipientCountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686235128518649006B6573 /* RecipientCountryRequest.swift */; };
+		E686235528518789006B6573 /* SendTransactionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686235428518789006B6573 /* SendTransactionHandler.swift */; };
+		E686235728518DF8006B6573 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686235628518DF8006B6573 /* UITextField+Extension.swift */; };
+		E6ADDD12284E22DA00CC6F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADDD11284E22DA00CC6F4D /* AppDelegate.swift */; };
+		E6ADDD14284E22DA00CC6F4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADDD13284E22DA00CC6F4D /* SceneDelegate.swift */; };
+		E6ADDD16284E22DA00CC6F4D /* SendingCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADDD15284E22DA00CC6F4D /* SendingCountryViewController.swift */; };
+		E6ADDD19284E22DA00CC6F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ADDD17284E22DA00CC6F4D /* Main.storyboard */; };
+		E6ADDD1B284E22DC00CC6F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ADDD1A284E22DC00CC6F4D /* Assets.xcassets */; };
+		E6ADDD1E284E22DC00CC6F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ADDD1C284E22DC00CC6F4D /* LaunchScreen.storyboard */; };
+		E6BBAB38284EB8E200F7A19F /* SendCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB37284EB8E200F7A19F /* SendCountryViewModel.swift */; };
+		E6BBAB3B284EBEDE00F7A19F /* SendCountryAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E6BBAB3A284EBEDE00F7A19F /* SendCountryAPI.json */; };
+		E6BBAB3D284EC28000F7A19F /* SendCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB3C284EC28000F7A19F /* SendCountry.swift */; };
+		E6BBAB42284EC52000F7A19F /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB3F284EC51F00F7A19F /* RequestError.swift */; };
+		E6BBAB43284EC52000F7A19F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB40284EC51F00F7A19F /* APIManager.swift */; };
+		E6BBAB44284EC52000F7A19F /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB41284EC52000F7A19F /* RequestManager.swift */; };
+		E6BBAB48284EC55B00F7A19F /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB47284EC55B00F7A19F /* DataParser.swift */; };
+		E6BBAB4C284EC5EC00F7A19F /* SendCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB4B284EC5EC00F7A19F /* SendCountryInteractor.swift */; };
+		E6BBAB4E284EC71600F7A19F /* SendCountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB4D284EC71600F7A19F /* SendCountryRepository.swift */; };
+		E6BBAB51284EC79B00F7A19F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB4F284EC79B00F7A19F /* Request.swift */; };
+		E6BBAB52284EC79B00F7A19F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB50284EC79B00F7A19F /* RequestType.swift */; };
+		E6BBAB56284ECBFA00F7A19F /* SendCountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB55284ECBFA00F7A19F /* SendCountryRequest.swift */; };
+		E6BBAB58284EDBCF00F7A19F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB57284EDBCF00F7A19F /* UIViewController+Extension.swift */; };
+		E6BBAB5C284EEB0F00F7A19F /* SendCountryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB5B284EEB0F00F7A19F /* SendCountryRouter.swift */; };
+		E6BBAB5E284EEC2400F7A19F /* SendTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB5D284EEC2400F7A19F /* SendTransactionViewController.swift */; };
+		E6BBAB60284EEC6400F7A19F /* SendTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB5F284EEC6400F7A19F /* SendTransactionViewModel.swift */; };
+		E6BBAB62284FAD2600F7A19F /* SendTransactionViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB61284FAD2600F7A19F /* SendTransactionViewDataMapper.swift */; };
+		E6BBAB64284FAD8100F7A19F /* SendTransactionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB63284FAD8100F7A19F /* SendTransactionViewData.swift */; };
+		E6BBAB66284FDDF600F7A19F /* RecipientCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBAB65284FDDF600F7A19F /* RecipientCountryViewController.swift */; };
+		E6BBAB6A284FDE7800F7A19F /* RecipientCountryAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E6BBAB69284FDE7800F7A19F /* RecipientCountryAPI.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6ADDD25284E22DC00CC6F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6ADDD06284E22DA00CC6F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6ADDD0D284E22DA00CC6F4D;
+			remoteInfo = PenguinPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E60397B82868782500E66F2B /* ExchangeRateAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExchangeRateAPI.json; sourceTree = "<group>"; };
+		E65C39DF285247BE00488E1F /* SendTransactionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionViewModelTests.swift; sourceTree = "<group>"; };
+		E65C39E22852498A00488E1F /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		E6862319285115AE006B6573 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E686231B2851199D006B6573 /* RecipientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientViewModel.swift; sourceTree = "<group>"; };
+		E686231D28511A4E006B6573 /* RecipientCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCountry.swift; sourceTree = "<group>"; };
+		E686231F28511AC9006B6573 /* RecipientCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCountryInteractor.swift; sourceTree = "<group>"; };
+		E686232128511ADE006B6573 /* RecipientCountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCountryRepository.swift; sourceTree = "<group>"; };
+		E686232328511E89006B6573 /* SendTransactionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionRouter.swift; sourceTree = "<group>"; };
+		E6862325285129AD006B6573 /* CurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRate.swift; sourceTree = "<group>"; };
+		E686232728513574006B6573 /* CurrencyViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewData.swift; sourceTree = "<group>"; };
+		E686232928513581006B6573 /* CurrencyDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDataMapper.swift; sourceTree = "<group>"; };
+		E686232B28513F72006B6573 /* SendTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionRepository.swift; sourceTree = "<group>"; };
+		E686232D28513F7B006B6573 /* SendTransactionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionInteractor.swift; sourceTree = "<group>"; };
+		E686234B2851858B006B6573 /* RecipientExternalHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientExternalHandler.swift; sourceTree = "<group>"; };
+		E686234F2851862E006B6573 /* CurrencyRateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateRequest.swift; sourceTree = "<group>"; };
+		E686235128518649006B6573 /* RecipientCountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCountryRequest.swift; sourceTree = "<group>"; };
+		E686235428518789006B6573 /* SendTransactionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionHandler.swift; sourceTree = "<group>"; };
+		E686235628518DF8006B6573 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		E6ADDD0E284E22DA00CC6F4D /* Monetra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monetra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6ADDD11284E22DA00CC6F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6ADDD13284E22DA00CC6F4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E6ADDD15284E22DA00CC6F4D /* SendingCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendingCountryViewController.swift; sourceTree = "<group>"; };
+		E6ADDD18284E22DA00CC6F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6ADDD1A284E22DC00CC6F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6ADDD1D284E22DC00CC6F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6ADDD1F284E22DC00CC6F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6ADDD24284E22DC00CC6F4D /* MonetraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonetraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6BBAB37284EB8E200F7A19F /* SendCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountryViewModel.swift; sourceTree = "<group>"; };
+		E6BBAB3A284EBEDE00F7A19F /* SendCountryAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SendCountryAPI.json; sourceTree = "<group>"; };
+		E6BBAB3C284EC28000F7A19F /* SendCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountry.swift; sourceTree = "<group>"; };
+		E6BBAB3F284EC51F00F7A19F /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		E6BBAB40284EC51F00F7A19F /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E6BBAB41284EC52000F7A19F /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		E6BBAB47284EC55B00F7A19F /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		E6BBAB4B284EC5EC00F7A19F /* SendCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountryInteractor.swift; sourceTree = "<group>"; };
+		E6BBAB4D284EC71600F7A19F /* SendCountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountryRepository.swift; sourceTree = "<group>"; };
+		E6BBAB4F284EC79B00F7A19F /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E6BBAB50284EC79B00F7A19F /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		E6BBAB55284ECBFA00F7A19F /* SendCountryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountryRequest.swift; sourceTree = "<group>"; };
+		E6BBAB57284EDBCF00F7A19F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E6BBAB5B284EEB0F00F7A19F /* SendCountryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCountryRouter.swift; sourceTree = "<group>"; };
+		E6BBAB5D284EEC2400F7A19F /* SendTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionViewController.swift; sourceTree = "<group>"; };
+		E6BBAB5F284EEC6400F7A19F /* SendTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionViewModel.swift; sourceTree = "<group>"; };
+		E6BBAB61284FAD2600F7A19F /* SendTransactionViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionViewDataMapper.swift; sourceTree = "<group>"; };
+		E6BBAB63284FAD8100F7A19F /* SendTransactionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTransactionViewData.swift; sourceTree = "<group>"; };
+		E6BBAB65284FDDF600F7A19F /* RecipientCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCountryViewController.swift; sourceTree = "<group>"; };
+		E6BBAB69284FDE7800F7A19F /* RecipientCountryAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecipientCountryAPI.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6ADDD0B284E22DA00CC6F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ADDD21284E22DC00CC6F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E65C39E12852497E00488E1F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E65C39E22852498A00488E1F /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E686232F28518120006B6573 /* SendCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E68623332851818D006B6573 /* View */,
+				E68623322851816D006B6573 /* ViewModel */,
+			);
+			path = SendCountry;
+			sourceTree = "<group>";
+		};
+		E68623322851816D006B6573 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB37284EB8E200F7A19F /* SendCountryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E68623332851818D006B6573 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6ADDD15284E22DA00CC6F4D /* SendingCountryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E68623342851819B006B6573 /* SendTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E6862336285181D7006B6573 /* ViewModel */,
+				E6862335285181C0006B6573 /* View */,
+			);
+			path = SendTransaction;
+			sourceTree = "<group>";
+		};
+		E6862335285181C0006B6573 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB5D284EEC2400F7A19F /* SendTransactionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6862336285181D7006B6573 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB5F284EEC6400F7A19F /* SendTransactionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6862339285181FB006B6573 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				E686232928513581006B6573 /* CurrencyDataMapper.swift */,
+				E6BBAB61284FAD2600F7A19F /* SendTransactionViewDataMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		E686233A28518207006B6573 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				E686232728513574006B6573 /* CurrencyViewData.swift */,
+				E6BBAB63284FAD8100F7A19F /* SendTransactionViewData.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
+		E686233B2851821A006B6573 /* RecipientCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E68623462851851B006B6573 /* View */,
+				E686234528518512006B6573 /* ViewModel */,
+			);
+			path = RecipientCountry;
+			sourceTree = "<group>";
+		};
+		E686233C28518274006B6573 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB57284EDBCF00F7A19F /* UIViewController+Extension.swift */,
+				E6862319285115AE006B6573 /* UIColor+Extension.swift */,
+				E686235628518DF8006B6573 /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E686233D28518357006B6573 /* SendCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB4B284EC5EC00F7A19F /* SendCountryInteractor.swift */,
+			);
+			path = SendCountry;
+			sourceTree = "<group>";
+		};
+		E686233E285183C0006B6573 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E6862340285183DB006B6573 /* SendCountry */,
+				E686233F285183CD006B6573 /* SendTransaction */,
+				E686234128518410006B6573 /* RecipientCountry */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E686233F285183CD006B6573 /* SendTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E686232B28513F72006B6573 /* SendTransactionRepository.swift */,
+			);
+			path = SendTransaction;
+			sourceTree = "<group>";
+		};
+		E6862340285183DB006B6573 /* SendCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB4D284EC71600F7A19F /* SendCountryRepository.swift */,
+			);
+			path = SendCountry;
+			sourceTree = "<group>";
+		};
+		E686234128518410006B6573 /* RecipientCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E686232128511ADE006B6573 /* RecipientCountryRepository.swift */,
+			);
+			path = RecipientCountry;
+			sourceTree = "<group>";
+		};
+		E686234328518476006B6573 /* RecipientCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E686231F28511AC9006B6573 /* RecipientCountryInteractor.swift */,
+			);
+			path = RecipientCountry;
+			sourceTree = "<group>";
+		};
+		E686234428518485006B6573 /* SendTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E686233A28518207006B6573 /* ViewData */,
+				E6862339285181FB006B6573 /* Mapper */,
+				E686232D28513F7B006B6573 /* SendTransactionInteractor.swift */,
+			);
+			path = SendTransaction;
+			sourceTree = "<group>";
+		};
+		E686234528518512006B6573 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E686231B2851199D006B6573 /* RecipientViewModel.swift */,
+				E686234B2851858B006B6573 /* RecipientExternalHandler.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E68623462851851B006B6573 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB65284FDDF600F7A19F /* RecipientCountryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E686234728518526006B6573 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				E686234828518535006B6573 /* SendCountry */,
+				E68623492851853B006B6573 /* SendTransaction */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		E686234828518535006B6573 /* SendCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB5B284EEB0F00F7A19F /* SendCountryRouter.swift */,
+			);
+			path = SendCountry;
+			sourceTree = "<group>";
+		};
+		E68623492851853B006B6573 /* SendTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E686232328511E89006B6573 /* SendTransactionRouter.swift */,
+				E686235428518789006B6573 /* SendTransactionHandler.swift */,
+			);
+			path = SendTransaction;
+			sourceTree = "<group>";
+		};
+		E686234A28518553006B6573 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E686232F28518120006B6573 /* SendCountry */,
+				E68623342851819B006B6573 /* SendTransaction */,
+				E686233B2851821A006B6573 /* RecipientCountry */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E686234D285185F8006B6573 /* SendTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				E686234F2851862E006B6573 /* CurrencyRateRequest.swift */,
+			);
+			path = SendTransaction;
+			sourceTree = "<group>";
+		};
+		E686234E28518604006B6573 /* RecipientCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E686235128518649006B6573 /* RecipientCountryRequest.swift */,
+			);
+			path = RecipientCountry;
+			sourceTree = "<group>";
+		};
+		E6ADDD05284E22DA00CC6F4D = {
+			isa = PBXGroup;
+			children = (
+				E6ADDD10284E22DA00CC6F4D /* Monetra */,
+				E6ADDD27284E22DC00CC6F4D /* MonetraTests */,
+				E6ADDD0F284E22DA00CC6F4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6ADDD0F284E22DA00CC6F4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6ADDD0E284E22DA00CC6F4D /* Monetra.app */,
+				E6ADDD24284E22DC00CC6F4D /* MonetraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6ADDD10284E22DA00CC6F4D /* Monetra */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB45284EC52500F7A19F /* Data */,
+				E6BBAB4A284EC5C100F7A19F /* Domain */,
+				E686234A28518553006B6573 /* Views */,
+				E686234728518526006B6573 /* Routers */,
+				E686233C28518274006B6573 /* Extensions */,
+				E6ADDD11284E22DA00CC6F4D /* AppDelegate.swift */,
+				E6ADDD13284E22DA00CC6F4D /* SceneDelegate.swift */,
+				E6ADDD17284E22DA00CC6F4D /* Main.storyboard */,
+				E6ADDD1A284E22DC00CC6F4D /* Assets.xcassets */,
+				E6ADDD1C284E22DC00CC6F4D /* LaunchScreen.storyboard */,
+				E6ADDD1F284E22DC00CC6F4D /* Info.plist */,
+			);
+			path = Monetra;
+			sourceTree = "<group>";
+		};
+		E6ADDD27284E22DC00CC6F4D /* MonetraTests */ = {
+			isa = PBXGroup;
+			children = (
+				E65C39E12852497E00488E1F /* Mocks */,
+				E65C39DF285247BE00488E1F /* SendTransactionViewModelTests.swift */,
+			);
+			path = MonetraTests;
+			sourceTree = "<group>";
+		};
+		E6BBAB39284EBE4A00F7A19F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB69284FDE7800F7A19F /* RecipientCountryAPI.json */,
+				E6BBAB3A284EBEDE00F7A19F /* SendCountryAPI.json */,
+				E60397B82868782500E66F2B /* ExchangeRateAPI.json */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E6BBAB3E284EC4FD00F7A19F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB46284EC55300F7A19F /* Parser */,
+				E6BBAB40284EC51F00F7A19F /* APIManager.swift */,
+				E6BBAB3F284EC51F00F7A19F /* RequestError.swift */,
+				E6BBAB41284EC52000F7A19F /* RequestManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E6BBAB45284EC52500F7A19F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E686233E285183C0006B6573 /* Repository */,
+				E6BBAB53284EC7A400F7A19F /* Request */,
+				E6BBAB49284EC56300F7A19F /* Model */,
+				E6BBAB39284EBE4A00F7A19F /* API */,
+				E6BBAB3E284EC4FD00F7A19F /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E6BBAB46284EC55300F7A19F /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB47284EC55B00F7A19F /* DataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		E6BBAB49284EC56300F7A19F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E686231D28511A4E006B6573 /* RecipientCountry.swift */,
+				E6862325285129AD006B6573 /* CurrencyRate.swift */,
+				E6BBAB3C284EC28000F7A19F /* SendCountry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6BBAB4A284EC5C100F7A19F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E686233D28518357006B6573 /* SendCountry */,
+				E686234428518485006B6573 /* SendTransaction */,
+				E686234328518476006B6573 /* RecipientCountry */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E6BBAB53284EC7A400F7A19F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB54284ECBEB00F7A19F /* SendCountry */,
+				E686234D285185F8006B6573 /* SendTransaction */,
+				E686234E28518604006B6573 /* RecipientCountry */,
+				E6BBAB4F284EC79B00F7A19F /* Request.swift */,
+				E6BBAB50284EC79B00F7A19F /* RequestType.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E6BBAB54284ECBEB00F7A19F /* SendCountry */ = {
+			isa = PBXGroup;
+			children = (
+				E6BBAB55284ECBFA00F7A19F /* SendCountryRequest.swift */,
+			);
+			path = SendCountry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6ADDD0D284E22DA00CC6F4D /* Monetra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6ADDD38284E22DC00CC6F4D /* Build configuration list for PBXNativeTarget "Monetra" */;
+			buildPhases = (
+				E6ADDD0A284E22DA00CC6F4D /* Sources */,
+				E6ADDD0B284E22DA00CC6F4D /* Frameworks */,
+				E6ADDD0C284E22DA00CC6F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Monetra;
+			productName = PenguinPay;
+			productReference = E6ADDD0E284E22DA00CC6F4D /* Monetra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6ADDD23284E22DC00CC6F4D /* MonetraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6ADDD3B284E22DC00CC6F4D /* Build configuration list for PBXNativeTarget "MonetraTests" */;
+			buildPhases = (
+				E6ADDD20284E22DC00CC6F4D /* Sources */,
+				E6ADDD21284E22DC00CC6F4D /* Frameworks */,
+				E6ADDD22284E22DC00CC6F4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6ADDD26284E22DC00CC6F4D /* PBXTargetDependency */,
+			);
+			name = MonetraTests;
+			productName = PenguinPayTests;
+			productReference = E6ADDD24284E22DC00CC6F4D /* MonetraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6ADDD06284E22DA00CC6F4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					E6ADDD0D284E22DA00CC6F4D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					E6ADDD23284E22DC00CC6F4D = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = E6ADDD0D284E22DA00CC6F4D;
+					};
+				};
+			};
+			buildConfigurationList = E6ADDD09284E22DA00CC6F4D /* Build configuration list for PBXProject "Monetra" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6ADDD05284E22DA00CC6F4D;
+			productRefGroup = E6ADDD0F284E22DA00CC6F4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6ADDD0D284E22DA00CC6F4D /* Monetra */,
+				E6ADDD23284E22DC00CC6F4D /* MonetraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6ADDD0C284E22DA00CC6F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6BBAB6A284FDE7800F7A19F /* RecipientCountryAPI.json in Resources */,
+				E6ADDD1E284E22DC00CC6F4D /* LaunchScreen.storyboard in Resources */,
+				E6ADDD1B284E22DC00CC6F4D /* Assets.xcassets in Resources */,
+				E60397B92868782500E66F2B /* ExchangeRateAPI.json in Resources */,
+				E6ADDD19284E22DA00CC6F4D /* Main.storyboard in Resources */,
+				E6BBAB3B284EBEDE00F7A19F /* SendCountryAPI.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ADDD22284E22DC00CC6F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6ADDD0A284E22DA00CC6F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ADDD16284E22DA00CC6F4D /* SendingCountryViewController.swift in Sources */,
+				E6BBAB64284FAD8100F7A19F /* SendTransactionViewData.swift in Sources */,
+				E686232A28513581006B6573 /* CurrencyDataMapper.swift in Sources */,
+				E6BBAB4C284EC5EC00F7A19F /* SendCountryInteractor.swift in Sources */,
+				E686231A285115AE006B6573 /* UIColor+Extension.swift in Sources */,
+				E686232E28513F7B006B6573 /* SendTransactionInteractor.swift in Sources */,
+				E6BBAB52284EC79B00F7A19F /* RequestType.swift in Sources */,
+				E686232428511E89006B6573 /* SendTransactionRouter.swift in Sources */,
+				E686232028511AC9006B6573 /* RecipientCountryInteractor.swift in Sources */,
+				E686235228518649006B6573 /* RecipientCountryRequest.swift in Sources */,
+				E686232228511ADE006B6573 /* RecipientCountryRepository.swift in Sources */,
+				E6BBAB60284EEC6400F7A19F /* SendTransactionViewModel.swift in Sources */,
+				E6BBAB58284EDBCF00F7A19F /* UIViewController+Extension.swift in Sources */,
+				E686232C28513F72006B6573 /* SendTransactionRepository.swift in Sources */,
+				E6ADDD12284E22DA00CC6F4D /* AppDelegate.swift in Sources */,
+				E686231E28511A4E006B6573 /* RecipientCountry.swift in Sources */,
+				E6BBAB5E284EEC2400F7A19F /* SendTransactionViewController.swift in Sources */,
+				E686235528518789006B6573 /* SendTransactionHandler.swift in Sources */,
+				E6BBAB5C284EEB0F00F7A19F /* SendCountryRouter.swift in Sources */,
+				E6BBAB66284FDDF600F7A19F /* RecipientCountryViewController.swift in Sources */,
+				E68623502851862E006B6573 /* CurrencyRateRequest.swift in Sources */,
+				E6BBAB51284EC79B00F7A19F /* Request.swift in Sources */,
+				E6ADDD14284E22DA00CC6F4D /* SceneDelegate.swift in Sources */,
+				E6BBAB56284ECBFA00F7A19F /* SendCountryRequest.swift in Sources */,
+				E6BBAB62284FAD2600F7A19F /* SendTransactionViewDataMapper.swift in Sources */,
+				E6BBAB44284EC52000F7A19F /* RequestManager.swift in Sources */,
+				E6BBAB42284EC52000F7A19F /* RequestError.swift in Sources */,
+				E6BBAB38284EB8E200F7A19F /* SendCountryViewModel.swift in Sources */,
+				E686231C2851199D006B6573 /* RecipientViewModel.swift in Sources */,
+				E686234C2851858B006B6573 /* RecipientExternalHandler.swift in Sources */,
+				E6BBAB3D284EC28000F7A19F /* SendCountry.swift in Sources */,
+				E686232828513574006B6573 /* CurrencyViewData.swift in Sources */,
+				E6862326285129AD006B6573 /* CurrencyRate.swift in Sources */,
+				E6BBAB43284EC52000F7A19F /* APIManager.swift in Sources */,
+				E6BBAB4E284EC71600F7A19F /* SendCountryRepository.swift in Sources */,
+				E686235728518DF8006B6573 /* UITextField+Extension.swift in Sources */,
+				E6BBAB48284EC55B00F7A19F /* DataParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6ADDD20284E22DC00CC6F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65C39E0285247BE00488E1F /* SendTransactionViewModelTests.swift in Sources */,
+				E65C39E32852498A00488E1F /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6ADDD26284E22DC00CC6F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6ADDD0D284E22DA00CC6F4D /* Monetra */;
+			targetProxy = E6ADDD25284E22DC00CC6F4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6ADDD17284E22DA00CC6F4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6ADDD18284E22DA00CC6F4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6ADDD1C284E22DC00CC6F4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6ADDD1D284E22DC00CC6F4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6ADDD36284E22DC00CC6F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6ADDD37284E22DC00CC6F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6ADDD39284E22DC00CC6F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Monetra/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Monetra;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodesnippets.Monetra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E6ADDD3A284E22DC00CC6F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Monetra/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Monetra;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodesnippets.Monetra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E6ADDD3C284E22DC00CC6F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodesnippets.MonetraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monetra.app/Monetra";
+			};
+			name = Debug;
+		};
+		E6ADDD3D284E22DC00CC6F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodesnippets.MonetraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monetra.app/Monetra";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6ADDD09284E22DA00CC6F4D /* Build configuration list for PBXProject "Monetra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ADDD36284E22DC00CC6F4D /* Debug */,
+				E6ADDD37284E22DC00CC6F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6ADDD38284E22DC00CC6F4D /* Build configuration list for PBXNativeTarget "Monetra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ADDD39284E22DC00CC6F4D /* Debug */,
+				E6ADDD3A284E22DC00CC6F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6ADDD3B284E22DC00CC6F4D /* Build configuration list for PBXNativeTarget "MonetraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6ADDD3C284E22DC00CC6F4D /* Debug */,
+				E6ADDD3D284E22DC00CC6F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6ADDD06284E22DA00CC6F4D /* Project object */;
+}
